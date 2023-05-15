@@ -37,7 +37,7 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen">
       <aside className="stick flex flex-col gap-8 items-center bg-slate-200 p-8 w-60">
-        <Image src="/images/nti.svg" width={100} height={100} alt="Logo" className="w-32 h-auto" />
+        <Image src="/images/nti.svg" width={100} height={100} alt="Logo" className="w-20 h-auto" />
 
         <nav className="flex flex-col flex-1 w-full mt-10 gap-8">
           {

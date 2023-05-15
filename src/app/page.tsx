@@ -121,7 +121,7 @@ export default function Home() {
         width={100}
         height={100}
         alt='Logo'
-        className='mx-auto h-auto w-32'
+        className='mx-auto h-auto w-20'
       />
 
       <section className='border-b border-b-slate-400/20'>

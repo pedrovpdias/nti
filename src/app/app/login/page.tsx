@@ -14,7 +14,7 @@ export default function Login() {
           width={100}
           height={100}
           alt='Logo'
-          className="w-32 mx-auto"
+          className="w-20 mx-auto"
         />
         <Title title="Login" />
 
