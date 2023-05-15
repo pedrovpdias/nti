@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBox, faLock, faChevronRight, faLink, faPhone, faEnvelope, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+import { faBox, faLock, faChevronRight, faLink, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Title from '@/components/Title';
 
@@ -19,7 +19,7 @@ export default function Home() {
     },
     {
       id: 'passwords-link',
-      title: 'Recuperação de senha',
+      title: 'Restaurar senha',
       href: '',
       icon: faLock,
       class: modulesClassName + ' group-hover:bg-indigo-400'
@@ -108,8 +108,8 @@ export default function Home() {
     },
     {
       id: 3,
-      icon: faCalendarDays,
-      title: 'Telefone',
+      icon: faClock,
+      title: 'Horário de atendimento',
       info: <span>Seg / Sex: 07:00 às 19:00</span>
     },
   ]
@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <div className='grid gap-8 w-full p-8'>
       <Image
-        src="/images/next.svg"
+        src="/images/nti.svg"
         width={100}
         height={100}
         alt='Logo'
@@ -178,7 +178,7 @@ export default function Home() {
                     className='absolute z-0 w-full h-auto saturate-50'
                   />
                   
-                  <span className='group-hover:bg-black/60 w-24 h-24 text-white invisible group-hover:visible grid place-content-center text-sm z-10 shadow'>
+                  <span className='group-hover:bg-black/60 w-24 h-24 text-white invisible group-hover:visible grid place-content-center text-sm z-10 shadow transition-all duration-200'>
                     {system.title}
                   </span>
                 </div>
@@ -211,7 +211,7 @@ export default function Home() {
           </div>
         </div>
         <div className='w-fit grid p-8 gap-8 border-l border-l-slate-400/20'>
-          <Title title="Contatos" />
+          <Title title="Contato" />
 
           <div className='grid grid-cols-2 p-4 gap-8 items-start justify-center'>
             {
@@ -223,11 +223,11 @@ export default function Home() {
                     className='bg-sky-500 mx-auto p-4 rounded-xl shadow text-white' 
                   />
                   
-                  <span className='font-bold text-xl text-center'>
+                  <span className='font-bold text-xl text-center h-16'>
                     {contact.title}
                   </span>
 
-                  <p className='text-sm'>
+                  <p className='text-sm text-center'>
                     {contact.info}
                   </p>
                 </div>

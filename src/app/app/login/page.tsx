@@ -10,7 +10,7 @@ export default function Login() {
     <div className="grid place-content-center min-h-screen">
       <div className="bg-white/20 rounded-xl shadow p-8 flex flex-col gap-8">
         <Image
-          src='/images/next.svg'
+          src='/images/nti.svg'
           width={100}
           height={100}
           alt='Logo'
