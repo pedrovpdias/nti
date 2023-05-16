@@ -15,25 +15,25 @@ export default function Sidebar() {
     {
       id: 1,
       title: 'Dashboard',
-      href: '/app/dashboard',
+      href: '/admin/dashboard',
       icon: faDashboard
     },
     {
       id: 2,
       title: 'Almoxarifado',
-      href: '/app/almoxarifado',
+      href: '/admin/almoxarifado',
       icon: faBox
     },    
     {
       id: 3,
       title: 'Setores',
-      href: '/app/dashboard',
+      href: '/admin/dashboard',
       icon: faBuilding
     },
     {
       id: 4,
       title: 'Usuários',
-      href: '/app/dashboard',
+      href: '/admin/dashboard',
       icon: faUsers
     },
   ]

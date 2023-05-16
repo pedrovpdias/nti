@@ -7,9 +7,9 @@ import { faBox, faLock, faChevronRight, faLink, faPhone, faEnvelope, faClock } f
 import Title from '@/components/Title';
 
 export default function Home() {
-  const modulesClassName = 'm-auto bg-white/30 shadow p-4 backdrop-blur-3xl rounded-xl group-hover:text-white transition-all duration-200'
+  const modulesClassName = 'm-auto bg-white/30 shadow p-4 backdrop-blur-3xl rounded-xl group-hover:text-white transition-all duration-200';
   
-  const modules = [
+  const appModules = [
     {
       id: 'almoxarifado-link',
       title: 'Almoxarifado',
@@ -24,7 +24,7 @@ export default function Home() {
       icon: faLock,
       class: modulesClassName + ' group-hover:bg-indigo-400'
     }
-  ]
+  ];
   
   const systems = [
     {
@@ -85,7 +85,7 @@ export default function Home() {
       title: 'Resolução nº 31 - Aprovação do Regimento do CGTI',
       href: ''
     },
-  ]
+  ];
 
   const contacts = [
     {
@@ -112,7 +112,7 @@ export default function Home() {
       title: 'Horário de atendimento',
       info: <span>Seg / Sex: 07:00 às 19:00</span>
     },
-  ]
+  ];
   
   return (
     <div className='grid gap-8 w-full p-8'>
@@ -131,7 +131,7 @@ export default function Home() {
           <div className='flex gap-8 items-start'>
             <div className='grid gap-8 flex-1'>
               <p className='grid gap-8 indent-3 self-center'>
-                O Núcleo de Tecnologia da Informação (NTI) está subordinado à Direção Geral do Campus. É o setor responsável pela gestão, projeto e execução de serviços de Tecnologia da Informação, em atendimento às demandas provenientes da administração e ensino na unidade.
+                O Núcleo de Tecnologia da Informação está subordinado à Direção Geral do Campus. É o setor responsável pela gestão, projeto e execução de serviços de Tecnologia da Informação, em atendimento às demandas provenientes da administração e ensino na unidade.
               </p>
 
               <Link
@@ -144,7 +144,7 @@ export default function Home() {
 
             <div className='flex gap-8 flex-1 items-top justify-center'>
               {
-                modules && modules.map(module => (
+                appModules && appModules.map(module => (
                   <Link 
                     href={module.href}
                     className="grid place-content-start justify-center gap-2 hover:scale-105 transition-all duration-200 text-md text-center w-32 h-28 font-semibold group"

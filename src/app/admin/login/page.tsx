@@ -18,7 +18,7 @@ export default function Login() {
         />
         <Title title="Login" />
 
-        <form action="/app/dashboard" className="grid gap-4 border-b border-b-slate-500/20 p-8">
+        <form action="/admin/dashboard" className="grid gap-4 border-b border-b-slate-500/20 p-8">
           <div className="grid gap-2">
             <label htmlFor="user" className="text-xs font-semibold text-slate-400">
               Usuário
