@@ -2,12 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBox, faLock, faChevronRight, faLink, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBox, faLock, faChevronRight, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Title from '@/components/Title';
+import ModuleButton from '@/components/ModuleButton';
+import CGTILink from '@/components/CGTILink';
+import ContactCard from '@/components/ContactCard';
+import SystemLink from '@/components/SystemLink';
 
 export default function Home() {
-  const modulesClassName = 'm-auto bg-white/30 shadow p-4 backdrop-blur-3xl rounded-xl group-hover:text-white transition-all duration-200';
   
   const appModules = [
     {
@@ -15,14 +18,12 @@ export default function Home() {
       title: 'Almoxarifado',
       href: '',
       icon: faBox,
-      class: modulesClassName + ' group-hover:bg-sky-400'
     },
     {
       id: 'passwords-link',
       title: 'Restaurar senha',
       href: '',
       icon: faLock,
-      class: modulesClassName + ' group-hover:bg-indigo-400'
     }
   ];
   
@@ -121,7 +122,7 @@ export default function Home() {
         width={100}
         height={100}
         alt='Logo'
-        className='mx-auto h-auto w-20'
+        className='mx-auto h-auto w-20 dark:invert'
       />
 
       <section className='border-b border-b-slate-400/20'>
@@ -142,22 +143,10 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className='flex gap-8 flex-1 items-top justify-center'>
+            <div className='flex gap-8 flex-1 items-top justify-center group'>
               {
                 appModules && appModules.map(module => (
-                  <Link 
-                    href={module.href}
-                    className="grid place-content-start justify-center gap-2 hover:scale-105 transition-all duration-200 text-md text-center w-32 h-28 font-semibold group"
-                    key={module.id}
-                  >    
-                    <FontAwesomeIcon 
-                      icon={module.icon} 
-                      width={60} height={60} 
-                      className={module.class} 
-                    />
-
-                    {module.title}
-                  </Link>
+                  <ModuleButton module={module} />
                 ))
               }
             </div>
@@ -170,23 +159,13 @@ export default function Home() {
           <div className='flex flex-wrap gap-4 items-center justify-center'>
             {
               systems && systems.map(system => (
-                <div key={system.id} className='w-24 h-24 rounded-full text-white grid place-content-center overflow-hidden transition-all duration-200 hover:scale-105 group relative'>
-                  <Image
-                    src={system.thumbnail}
-                    width={100} height={100}
-                    alt={system.title}
-                    className='absolute z-0 w-full h-auto saturate-50'
-                  />
-                  
-                  <span className='group-hover:bg-black/60 w-24 h-24 text-white invisible group-hover:visible grid place-content-center text-sm z-10 shadow transition-all duration-200'>
-                    {system.title}
-                  </span>
-                </div>
+                <SystemLink system={system} />
               ))
             }
           </div>
           </div>
       </section>
+      
       <section className='flex'>
         <div className='flex-1 flex flex-col grow gap-8 p-8'>
           <Title title="CGTI" />
@@ -198,14 +177,7 @@ export default function Home() {
           <div className='flex flex-wrap justify-center items-start gap-8'>
             {
               cgtiLinks && cgtiLinks.map(link => (
-                <Link href={link.href} className='flex flex-col items-center gap-4 w-80 h-28 text-sm font-semibold text-center p-3 hover:scale-105 transition-all duration-200 bg-white/30 shadow backdrop-blur-3xl rounded-xl' key={link.id} >
-                  <FontAwesomeIcon 
-                    icon={faLink} 
-                    width={12} height={12} 
-                    className='bg-sky-500 w-5 h-5 p-1 text-white rounded-full' 
-                  />
-                  {link.title}
-                </Link>
+                <CGTILink link={link} />
               ))
             }
           </div>
@@ -216,21 +188,7 @@ export default function Home() {
           <div className='grid grid-cols-2 p-4 gap-8 items-start justify-center'>
             {
               contacts && contacts.map(contact => (
-                <div key={contact.id} className='grid gap-8 place-content-center w-72 h-80 bg-white/30 shadow p-8 backdrop-blur-3xl rounded-xl'>
-                  <FontAwesomeIcon 
-                    icon={contact.icon} 
-                    width={56} height={56}
-                    className='bg-sky-500 mx-auto p-4 rounded-xl shadow text-white' 
-                  />
-                  
-                  <span className='font-bold text-xl text-center h-16'>
-                    {contact.title}
-                  </span>
-
-                  <p className='text-sm text-center'>
-                    {contact.info}
-                  </p>
-                </div>
+                <ContactCard contact={contact} />
               ))
             }
           </div>

@@ -8,13 +8,13 @@ import Title from "@/components/Title";
 export default function Login() {
   return (
     <div className="grid place-content-center min-h-screen">
-      <div className="bg-white/20 rounded-xl shadow p-8 flex flex-col gap-8">
+      <div className="bg-white/30 dark:bg-white/5 rounded-xl shadow p-8 flex flex-col gap-8">
         <Image
           src='/images/nti.svg'
           width={100}
           height={100}
           alt='Logo'
-          className="w-20 mx-auto"
+          className="w-20 mx-auto dark:invert"
         />
         <Title title="Login" />
 
@@ -23,7 +23,7 @@ export default function Login() {
             <label htmlFor="user" className="text-xs font-semibold text-slate-400">
               Usuário
             </label>
-            <div className="flex gap-4 items-center bg-white border border-slate-500/20 rounded py-2 px-4 text-slate-300 [&:has(:focus)]:text-slate-500 [&:has(:focus)]:outline [&:has(:focus)]:outline-1 [&:has(:focus)]:outline-sky-200 transition-all duration-200">
+            <div className="flex gap-4 items-center bg-white dark:bg-white/5 border border-slate-500/20 rounded py-2 px-4 text-slate-300 dark:text-slate-600 [&:has(:focus)]:text-slate-500 dark:[&:has(:focus)]:text-slate-300 [&:has(:focus)]:outline [&:has(:focus)]:outline-1 [&:has(:focus)]:outline-sky-200 transition-all duration-200">
               <FontAwesomeIcon icon={faUser} className="w-3 h-auto" />
               <input 
                 type="text" name="user" id="user" 
@@ -36,7 +36,7 @@ export default function Login() {
             <label htmlFor="password" className="text-xs font-semibold text-slate-400">
               Senha
             </label>
-            <div className="flex gap-4 items-center bg-white border border-slate-500/20 rounded py-2 px-4 text-slate-300 [&:has(:focus)]:text-slate-500 [&:has(:focus)]:outline [&:has(:focus)]:outline-1 [&:has(:focus)]:outline-sky-200 transition-all duration-200">
+            <div className="flex gap-4 items-center bg-white dark:bg-white/5 border border-slate-500/20 rounded py-2 px-4 text-slate-300 dark:text-slate-600 [&:has(:focus)]:text-slate-500 dark:[&:has(:focus)]:text-slate-300 [&:has(:focus)]:outline [&:has(:focus)]:outline-1 [&:has(:focus)]:outline-sky-200 transition-all duration-200">
               <FontAwesomeIcon icon={faLock} className="w-3 h-auto" />
               <input 
                 type="password" name="password" id="password"

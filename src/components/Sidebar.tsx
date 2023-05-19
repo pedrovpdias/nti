@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightFromBracket, faHome, faDashboard, faBox, faUsers, faBuilding } from '@fortawesome/free-solid-svg-icons'
 
 export default function Sidebar() {
-  const iconClassName = 'w-fit h-auto bg-white/20 group-hover:text-white p-2 rounded shadow transition-colors duration-500 ';
+  const iconClassName = 'w-fit h-auto bg-white/30 dark:bg-white/5 group-hover:text-white p-2 rounded shadow transition-colors duration-500 ';
   
   const mainMenu = [
     {
@@ -46,8 +46,8 @@ export default function Sidebar() {
   ]
 
   return (
-    <aside className="stick flex flex-col gap-8 items-center bg-slate-200 py-8">
-      <Image src="/images/nti.svg" width={100} height={100} alt="Logo" className="w-20 h-auto" />
+    <aside className="stick flex flex-col gap-8 items-center bg-slate-200 dark:bg-gradient-to-bl dark:from-slate-950 dark:to-slate-900 py-8">
+      <Image src="/images/nti.svg" width={100} height={100} alt="Logo" className="w-20 h-auto dark:invert" />
 
       <nav className="flex flex-col flex-1 w-full mt-10 gap-4">
         {
